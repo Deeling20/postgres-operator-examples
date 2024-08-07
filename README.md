@@ -6,7 +6,7 @@ This would allow to simulate read and write workloads on the RDS PostgreSQL and 
 
 ## Usage
 
-./refresh.sh -f <file.lua> -b <table1,table2,...> -u <username> -d <database> -h <host> -p <port> -e <sysbench events> -t <sysbench threads> -w <password> -E <table1=events1,table2=events2,...> -O 
+./refresh.sh -f <file.lua> -b <table1,table2,...> -u  <username> -d <database> -h <host> -p <port> -e <sysbench events> -t <sysbench threads> -w <password> -E <table1=events1,table2=events2,...> -O 
 
 
 ## Options
