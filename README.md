@@ -65,12 +65,12 @@ Run sysbench for a specific file with custom username, database, and threads:
 ```./script.sh -f custom_file.lua -u myuser -d mydb -t 200 -h <host> -w <password>```
 
 ## Sample Data Description
-- `item_category` - It is a lookup table which has two columns category_id (auto-generated integer serves as primary key) and category_name. We pre-populate this table with 10 rows.
-Primary key ( category_id )
-- `item_inventory` - It is the core table which is going to be referred in most of the pre-packaged workload simulation scripts. It is where we store inventory of the items along with details. The table stores inventory_id (auto-generated bigint, also serves as primary key), item_name (255 varchar), item_count (integer), item_category (integer), dttm (timestamp), popularity_rank (bigint). The table has indexes:
-Primary key ( inventory_id )
-idx_item_category ( item_category )
-idx_inventory_rank ( item_category, popularity_rank DESC )
+- `item_category` - It is a lookup table which has two columns `category_id` (auto-generated integer serves as primary key) and category_name. We pre-populate this table with 10 rows.
+`Primary key ( category_id )`
+- `item_inventory` - It is the core table which is going to be referred in most of the pre-packaged workload simulation scripts. It is where we store inventory of the items along with details. The table stores `inventory_id (auto-generated bigint, also serves as primary key), item_name (255 varchar), item_count (integer), item_category (integer), dttm (timestamp), popularity_rank (bigint)`. The table has indexes:
+`Primary key ( inventory_id )`
+`idx_item_category ( item_category )`
+`idx_inventory_rank ( item_category, popularity_rank DESC )`
 - `orders` - It is the table where we will track user orders. Every order has a unique order_id (auto-generated bigint, also serves as primary key). One order may have multiple items. orders table will only store details such as userid, and delivery address and contact details (delivery_name , delivery_appartment_no, delivery_city, delivery_country, delivery_pincode, delivery_contact) and order details - order_dttm, order_status, and order_status_dttm. There is a pre-packaged script which can be use for placing orders - and will generated random data for delivery details, and update inventory table for items added to order. The table has indexes:
 Primary key ( order_id )
 idx_order_user_dttm ( userid, order_dttm )
