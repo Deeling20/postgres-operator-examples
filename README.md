@@ -27,7 +27,7 @@ This would allow to simulate read and write workloads on the RDS PostgreSQL and 
 - `-t <sysbench threads>`: 
  number of threads for sysbench. Default is `100`.
 
- *Refer [general-command-line-options in Sysbench](https://github.com/akopytov/sysbench/blob/master/README.md#general-command-line-options) for more details on events and threads options.*
+ *Refer [general-command-line-options in Sysbench](https://github.com/akopytov/sysbench/blob/master/README.md#general-command-line-options) for more details on `events` and `threads` options.*
 - `-w <password>`: 
  PostgreSQL password. This option is required.
 - `-E <table1=events1,table2=events2,...>`:
