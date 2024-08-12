@@ -1,6 +1,6 @@
 # OpenSourceDBBenchmark Script
 
-This script is designed to run the sysbench against  RDS PostgreSQL/Aurora PostgreSQL  databases for pre-populated data. It provides various options to configure the database connection, sysbench parameters, and custom events for specific tables.
+This script is designed to run the [sysbench](https://github.com/akopytov/sysbench?tab=readme-ov-file#sysbench) against  RDS PostgreSQL/Aurora PostgreSQL  databases for pre-populated data. It provides various options to configure the database connection, sysbench parameters, and custom events for specific tables.
 
 This would allow to simulate read and write workloads on the RDS PostgreSQL and Aurora PostgreSQL database instances allowing controlled benchmark testing.
 
@@ -26,9 +26,11 @@ This would allow to simulate read and write workloads on the RDS PostgreSQL and 
  number of events for sysbench. Default is `1000`.
 - `-t <sysbench threads>`: 
  number of threads for sysbench. Default is `100`.
+ Refer (general-command-line-options in Sysbench)[https://github.com/akopytov/sysbench/blob/master/README.md#general-command-line-options] for more details on events and threads options.
 - `-w <password>`: 
  PostgreSQL password. This option is required.
-- `-E <table1=events1,table2=events2,...>`: Specify a comma-separated list of table=events pairs to override the default events for specific tables.
+- `-E <table1=events1,table2=events2,...>`:
+ Specify a comma-separated list of table=events pairs to override the default events for specific tables.
 
 
 
